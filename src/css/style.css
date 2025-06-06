@@ -207,7 +207,8 @@ nav {
     border-radius: 20px;
     position: relative;
     box-shadow: 0 20px 40px rgba(37, 99, 235, 0.3);
-    animation: resize 3s infinite;
+    animation: resize linear 3s infinite;
+
 }
     @keyframes resize {
         0%, 100% {
@@ -338,11 +339,10 @@ nav {
             flex-direction: column;
             align-items: center;
         }
-
         
         .hero-visual {
             margin-left: 0;
-            margin-top: 0rem;
+            margin-top: 1rem;
         }
         
         .hero-title {
