@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "npx @tailwindcss/cli -i ./src/css/input.css -o ./src/css/output.css --watch"
+    "dev": "npx @tailwindcss/cli -i ./src/css/input.css -o ./src/css/output.css --watch",
+    "build": "npx @tailwindcss/cli -i ./src/css/input.css -o ./src/css/output.css"
   },
   "keywords": [],
   "author": "",
@@ -17,5 +18,13 @@
   },
   "dependencies": {
     "aos": "^2.3.4"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kotechi/myportofolio.git"
+  },
+  "bugs": {
+    "url": "https://github.com/kotechi/myportofolio/issues"
+  },
+  "homepage": "https://github.com/kotechi/myportofolio#readme"
 }
