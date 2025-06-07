@@ -88,9 +88,9 @@
             display: flex;
             align-items: center;
             justify-content: space-between;
-            padding: 1rem 2rem;
+            padding: 1rem 1rem;
             max-width: 1200px;
-            height: 90vh;
+            min-height: 90vh;
             margin: 0 auto;
             gap: 2.5rem;
         }
@@ -351,6 +351,7 @@
             max-width: 1200px;
             width: 100%;
             gap: 4rem;
+            flex-direction: row-reverse;
         }
 
         .about-left {
@@ -940,3 +941,83 @@
         .overflow-x-hidden {
             overflow-x: hidden;
         }
+
+        /* Hamburger styles */
+.hamburger-btn {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 44px;
+    height: 44px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    z-index: 30;
+    margin-left: auto;
+}
+.hamburger-btn span {
+    display: block;
+    width: 28px;
+    height: 3px;
+    background: #fff;
+    margin: 4px 0;
+    border-radius: 2px;
+    transition: all 0.3s;
+}
+.hamburger-btn.open span:nth-child(1) {
+    transform: translateY(7px) rotate(45deg);
+}
+.hamburger-btn.open span:nth-child(2) {
+    opacity: 0;
+}
+.hamburger-btn.open span:nth-child(3) {
+    transform: translateY(-7px) rotate(-45deg);
+}
+
+/* Mobile nav */
+.nav-mobile {
+    display: none;
+}
+.nav-mobile.open {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: rgba(20,20,20,0.98);
+    box-shadow: 0 8px 24px rgba(0,0,0,0.2);
+    z-index: 20;
+    padding: 1.2rem 0;
+    gap: 0.5rem;
+    animation: fadeInNav 0.3s;
+}
+@keyframes fadeInNav {
+    from { opacity: 0; transform: translateY(-10px);}
+    to { opacity: 1; transform: translateY(0);}
+}
+.nav-mobile .navlink {
+    margin: 0.2rem 0;
+    font-size: 1.1rem;
+    padding: 0.7rem 1.5rem;
+    width: 100%;
+    text-align: left;
+    display: block;
+}
+
+/* Responsive nav */
+@media (max-width: 900px) {
+    .nav-desktop {
+        display: none !important;
+    }
+    .hamburger-btn {
+        display: flex !important;
+    }
+    #left-navlink {
+        margin-left: 0.5rem;
+    }
+    #inner-nav {
+        padding: 0.5rem 0.5rem;
+    }
+}
