@@ -90,7 +90,7 @@
             justify-content: space-between;
             padding: 1rem 1rem;
             max-width: 1200px;
-            min-height: 90vh;
+            min-height: 100vh;
             margin: 0 auto;
             gap: 2.5rem;
         }
@@ -686,19 +686,36 @@
     display: none !important;
 }
 
-.certificate-image {
+.certificate-image-wrapper {
+    position: relative;
     width: 100%;
     max-width: 280px;
+    height: 200px;
+    margin-bottom: 1rem;
+}
+
+.certificate-image {
+    width: 100%;
     height: 200px;
     background-color: #cccccc;
     border-radius: 10px;
     object-fit: cover;
-    margin-bottom: 1rem;
-    transition: transform 0.3s ease;
+    display: block;
+    position: relative;
+    z-index: 1;
 }
 
-.certificate-item:hover .certificate-image {
-    transform: scale(1.05);
+.certificate-fallback {
+    display: none;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 0; left: 0; width: 100%; height: 100%;
+    background: #ccc;
+    color: #666;
+    font-size: 0.9rem;
+    border-radius: 10px;
+    z-index: 2;
 }
 
 .certificate-info {
@@ -725,11 +742,98 @@
     line-height: 1.5;
 }
 
+#contact {
+    padding: 4rem 2rem;
+    background-color: #0e0e0e;
+    min-height: 85vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.contact-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1200px;
+    width: 100%;
+    gap: 4rem;
+}
+
+.contact-left {
+    flex: 1;
+    max-width: 600px;
+}
+
+.contact-judul {
+    font-size: 5rem;
+    font-weight: bold;
+    margin-bottom: 5rem;
+    background: linear-gradient(180deg, blue, white);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    color: transparent;
+}
+
+.contact-link {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+.contact-link-item {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    color: #ffffff;
+    text-decoration: none;
+    padding: 1rem;
+    background-color: #1a1a1a;
+    border: 1px solid #333333;
+    border-radius: 10px;
+    transition: all 0.3s ease;
+}
+.contact-link-item:hover {
+    background-color: #2a2a2a;
+    border-color: #3b82f6;
+    transform: translateY(-2px);
+}
+.contact-link-item svg {
+    flex-shrink: 0;
+}
+
+.contact-right {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.contact-map {
+    width: 100%;
+    max-width: 400px;
+    height: 100%;
+    background-color: #1a1a1a;
+    border: 1px solid #333333;
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #666;
+    padding: 1rem;
+    font-size: 1rem;
+}
+
+
 @media (max-width: 768px) {
     #left-navlink {
         display: none;
     }
+    nav{
+        position: sticky;
+    }
+    
             .hero-section {
+                max-width: 100vw;
                 flex-direction: column;
                 text-align: center;
                 gap: 0;
@@ -738,6 +842,7 @@
             
             .hero-content {
                 text-align: center;
+
                 display: flex;
                 flex-direction: column;
                 align-items: center;
@@ -751,11 +856,13 @@
             }
             
             .device-mockup {
-                margin-top: 2rem;
+                
+                max-width: 250px;
+                height: 300px;
             }
-            
             .hero-title {
                 font-size: 2rem;
+                margin-top: 6rem;
             }
             
             .hero-subtitle {
@@ -893,11 +1000,21 @@
                     transform: translateY(0);
                 }
             }
+
+            .contact-container {
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+            }
+            .contact-judul {
+                font-size: 3.5rem;
+                margin-bottom: 2rem;
+            }
     }
 
         /* Navigation styles */
         nav {
-            position: sticky;
+            position: fixed;
             top: 0;
             width: 100%;
             z-index: 50;
