@@ -825,9 +825,7 @@
 
 
 @media (max-width: 768px) {
-    #left-navlink {
-        display: none;
-    }
+
     nav{
         position: sticky;
     }
