@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "dev": "npx @tailwindcss/cli -i ./src/css/input.css -o ./src/css/output.css --watch",
-    "build": "npx @tailwindcss/cli -i ./src/css/input.css -o ./src/css/output.css"
+    "build": "npx @tailwindcss/cli -i ./src/css/input.css -o ./src/css/output.css",
+    "copy-aos": "cp node_modules/aos/dist/aos.css src/css/aos.css && cp node_modules/aos/dist/aos.js src/js/aos.js"
   },
   "keywords": [],
   "author": "",

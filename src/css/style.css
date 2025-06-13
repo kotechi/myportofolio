@@ -144,7 +144,7 @@
             color: #cccccc;
             position: relative;
             transform: scale(0%);
-            animation: sizing 2s ease-out forwards;
+            animation: sizing 1s ease-out forwards;
             animation-delay: 3.1s;
             margin-bottom: 1.5rem;
         }
