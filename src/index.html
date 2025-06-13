@@ -12,7 +12,7 @@
     <nav class="sticky top-0 w-full z-50 ">
         <div id="inner-nav" class="flex w-full shadow-md">
             <div class="ml-2 flex " id="left-navlink">
-                <img src="img/A.jpg" style="width: 35px; border-radius: 50%;" alt="">
+                <img src="img/A-nav.png" style="width: 35px; border-radius: 50%;" alt="">
             </div>
             <button id="hamburger-btn" class="hamburger-btn" aria-label="Toggle navigation">
                 <span></span><span></span><span></span>
@@ -68,7 +68,7 @@
 <section id="about">
     <div class="about-container">
         <div class="about-left">
-            <h2 class="about-title">About Me</h2>
+            <h2 class="about-title" data-aos="fade-up" >About Me</h2>
             
             <div class="about-description shadow-xl" data-aos="fade-up" data-aos-duration="1000">
                 Saya adalah seorang pemuda berusia 17 tahun dari Bogor yang memiliki minat besar dalam dunia teknologi, khususnya pengembangan web. Dengan semangat belajar yang tinggi, saya terus mengembangkan kemampuan dalam berbagai teknologi web modern.
@@ -152,11 +152,10 @@
 </section>
 
 <script>
+    AOS.init();
+</script>
+<script>
 document.addEventListener('DOMContentLoaded', function() {
-    if (window.AOS && typeof AOS.init === 'function') {
-        AOS.init();
-    }
-
     const skillDots = document.querySelectorAll('.skills-tag');
     skillDots.forEach(dot => {
         dot.addEventListener('click', () => {
