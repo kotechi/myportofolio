@@ -390,7 +390,7 @@
             position: absolute;
             height: 100%;
             width: 100%;
-            background-image: conic-gradient(from var(--angle), white, transparent, transparent, transparent);
+            background-image: conic-gradient(from var(--angle), #1d4ed8, transparent, transparent, transparent);
             top: 50%;
             left: 50%;
             z-index: -1;
@@ -663,6 +663,7 @@
 .certificate-title {
     font-size: 2.5rem;
     font-weight: bold;
+    margin-top: 1rem;
     margin-bottom: 3rem;
     color: #ffffff;
     text-align: center;
