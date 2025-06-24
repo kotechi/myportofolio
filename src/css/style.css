@@ -778,6 +778,7 @@
     padding: 4rem 2rem;
     background-color: #0e0e0e;
     min-height: 85vh;
+    max-width: 100vw;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -786,7 +787,6 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    max-width: 1200px;
     width: 100%;
     gap: 4rem;
 }
@@ -1052,7 +1052,7 @@
         nav {
             position: fixed;
             top: 0;
-            width: 100%;
+            width: 100vw;
             z-index: 50;
         }
 
@@ -1154,7 +1154,7 @@
     margin: 0.2rem 0;
     font-size: 1.1rem;
     padding: 0.7rem 1.5rem;
-    width: 100%;
+    width: auto;
     text-align: left;
     display: block;
 }
